@@ -17,16 +17,11 @@ function traerTopTen () {
     fetch(URL)
         .then(response => response.json())
         .then(datos => {
-            console.log(datos);
-            /*console.log(datos.Data[0].CoinInfo.Name);
-            console.log(datos.Data[0].CoinInfo.FullName);*/
             for (let i = 0; i < datos.Data.length; i++) {
-                //console.log(datos.Data[i].CoinInfo);
                 let criptoOpcion = document.createElement('option');
                 criptoOpcion.setAttribute('value', `${datos.Data[i].CoinInfo.Name}`)
                 criptoOpcion.textContent = `${datos.Data[i].CoinInfo.FullName}`;
                 criptoMoneda.appendChild(criptoOpcion);
-                //console.log(criptoOpcion);   
             }
         })
 }
@@ -36,9 +31,6 @@ function obtenerMonedas (event) {
 
     let valorMoneda = monedaLocal.value;
     let criptoValor = criptoMoneda.value;
-    console.log(valorMoneda);
-    console.log(criptoValor);
-
     cotizarMoneda(valorMoneda, criptoValor);
     
 }
@@ -52,7 +44,6 @@ function cotizarMoneda (valorMoneda, criptoValor) {
     fetch(URL)
         .then(response => response.json())
         .then(datos => {
-            console.log(datos);
 
             const valorActual = document.createElement('p');
             valorActual.innerHTML = ` 1 ${criptoValor} cuesta ${Object.values(datos).toString()} ${valorMoneda}`;
