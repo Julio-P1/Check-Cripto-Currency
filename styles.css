@@ -1,0 +1,35 @@
+.main-body{
+    background-image: url('/imgs/blockchain-app.jpg');
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-formulario {
+    margin: 0;
+    width: 40%;
+    height: 30%;
+    position: absolute;
+    background-color: rgba(82, 176, 230, 0.719);
+    padding: 15px 15px;
+    color: white;
+    border-radius: 2%;
+    top: 20%;
+    left: 30%;
+    opacity: 0.90;
+}
+
+.show-value {
+    width: 47%;
+    background-color: white;
+    opacity: 0.80;
+    border-radius: 3%;
+    padding: 1px 4px;
+    position: absolute;
+    left: 30%;
+    top: 9%;
+    color: tomato;
+    font-size: 30px;
+    font-weight: bold;
+
+}
